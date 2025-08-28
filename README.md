@@ -114,6 +114,16 @@ The server responded with **HTTP 200 (OK)** and a response size of **1501 bytes*
 
 This entry represents a **high-risk Command Injection attempt**, showing the attacker moving from reconnaissance (`whoami`, `uname`, `ls`) to attempting access to sensitive system data.  
 
+---
+
+The differing **response sizes** across the POST requests suggest that the commands may have been executed. To verify this, we now move to **Step 2: Checking the Web Server’s Command History**, where we will examine whether the POSTed commands were actually run on the server.
+
+<br>
+
+## Step 2: Checking the Web Server’s Command History
+
+
+
 
 
 
