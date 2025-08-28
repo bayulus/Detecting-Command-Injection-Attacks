@@ -34,4 +34,27 @@ That is why it is very important to inspect user input carefully and look for ke
 
 This alert shows an incoming HTTP **POST** request from source IP `61.177.172.87` to our web server `WebServer1004` (`172.16.17.16`).  
 The rule **SOC168 - Whoami Command Detected in Request Body** was triggered because the request body contained the string `whoami`.  
-Since the **Device Action = Allowed**, the request was not blocked. This could indicate an attempt to perform **Command Injection** to identify the server’s running user.  
+Since the **Device Action = Allowed**, the request was not blocked. This could indicate an attempt to perform **Command Injection** to identify the server’s running user. 
+
+## Step 1: Check Web Server Logs
+
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/1.png?raw=true" > 
+
+To begin the investigation, I searched the log management system for all entries related to the web server IP `172.16.17.16`.  
+
+This helps to:  
+- Identify all requests made to the server around the alert time  
+- Determine whether the `whoami` string appeared in other requests  
+- Look for any patterns that indicate a **Command Injection attempt**  
+
+By filtering the logs this way, we can see if the alert was an isolated event or part of a larger attack.
+
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/3.png?raw=true" > 
+
+The search returned **5 log entries** from the source IP `61.177.172.87` to our web server `172.16.17.16`.  
+
+We will now analyze each log entry one by one to understand what the attacker may be attempting and whether any **Command Injection** was attempted or successful. 
+
+
+
+
