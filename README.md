@@ -122,6 +122,17 @@ The differing **response sizes** across the POST requests suggest that the comma
 
 ## Step 2: Checking the Web Server’s Command History
 
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/9.png?raw=true" >
+
+After checking the terminal history of the web server, we can clearly see that the commands were executed. This confirms that the POST parameters were successfully run and that the web server has been compromised.
+
+Just to cross-check, let’s review the running processes on the web server to determine if any suspicious or unauthorized activity is present.
+
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/10.png?raw=true" >
+
+As we can see, the process history shows that the commands were executed under a **high-privilege account (root)**. This confirms that the web server is compromised. At this point, the priority is to **contain the affected server** and escalate the case for **further investigation and mitigation** to prevent additional damage.
+
+
 
 
 
