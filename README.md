@@ -154,7 +154,7 @@ We already know the **source IP** belongs to the attacker. To gather further int
 
 <img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/12.png?raw=true" >
 
-As you can see, the source IP address originates from **China (CHINANET Jiangsu Province Network)** and has been reported multiple times in **AbuseIPDB**, confirming its association with malicious activity.  
+As you can see, the source IP address originates from **China** and has been reported multiple times in **AbuseIPDB**, confirming its association with malicious activity.  
 
 This intelligence can be leveraged to:  
 - Block the IP address at the firewall or WAF.  
