@@ -132,6 +132,37 @@ Just to cross-check, let’s review the running processes on the web server to d
 
 As we can see, the process history shows that the commands were executed under a **high-privilege account (root)**. This confirms that the web server is compromised. At this point, the priority is to **contain the affected server** and escalate the case for **further investigation and mitigation** to prevent additional damage.
 
+<br>
+
+## Step 4: Contain the Affected Host 
+
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/11.png?raw=true" >
+
+Since the web server has been confirmed as **compromised** and the malicious commands were executed with **root privileges**, immediate **containment** is required.  
+
+Actions to take:  
+- Isolate the host from the network to prevent further spread.  
+- Stop or suspend suspicious processes.  
+- Preserve forensic artifacts (logs, memory, binaries) for investigation.  
+- Prepare the host for escalation to the incident response team.
+
+<br>
+
+## Step 5: Investigate the Attacker’s IP  
+
+We already know the **source IP** belongs to the attacker. To gather further intelligence, we will check the **IP reputation and geolocation** using tools such as **AbuseIPDB**.  
+
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/12.png?raw=true" >
+
+As you can see, the source IP address originates from **China (CHINANET Jiangsu Province Network)** and has been reported multiple times in **AbuseIPDB**, confirming its association with malicious activity.  
+
+This intelligence can be leveraged to:  
+- Block the IP address at the firewall or WAF.  
+- Add detection rules for similar activity.  
+- Feed into threat intelligence for future correlation.  
+
+
+
 
 
 
