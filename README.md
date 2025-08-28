@@ -2,7 +2,7 @@
 
 <br>
 
-<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/Gits..png?raw=true" > 
+<img src="https://github.com/bayulus/Detecting-Command-Injection-Attacks/blob/main/img/Gits.png?raw=true" > 
 
 <p>In this project, I investigate a potential Command Injection attack observed in web server logs, specifically the detection of the <b><i>whoami</i></b> command within the request body. Command Injection is a critical vulnerability listed in the OWASP Top 10, and this project focuses on analyzing whether the activity represents a false positive or a real exploitation attempt.
 
