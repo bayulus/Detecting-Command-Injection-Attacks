@@ -206,7 +206,22 @@ These actions ensure that the compromise is fully mitigated and reduce the risk 
 
 8. **Regular Security Testing**  
    - Conduct code reviews, penetration testing, and vulnerability scanning.  
-   - Keep software and libraries up-to-date.  
+   - Keep software and libraries up-to-date.
+
+## Conclusion  
+
+From the investigation, we confirmed that the web server was compromised through a command injection vulnerability.  
+The attacker successfully executed commands with root privileges, which posed a critical security risk.  
+Containment measures were applied to stop the ongoing processes, block the malicious IP address, and isolate the host.  
+
+Moving forward, thorough incident response steps must be taken to:  
+- Remove any remaining malicious activity,  
+- Ensure no lateral movement occurred across the network, and  
+- Apply long-term fixes (secure coding, patching, and continuous monitoring).  
+
+This case highlights the importance of proactive security controls, proper input validation, and regular security testing to prevent command injection attacks.  
+
+[![Static Badge](https://img.shields.io/badge/%20Please%20click%20here%20to%20explore%20additional%20projects-blue?style=for-the-badge)](https://github.com/bayulus/)
   
 
 
