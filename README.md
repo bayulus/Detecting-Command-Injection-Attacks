@@ -12,8 +12,6 @@ This project aims to offer a practical and investigative approach to detecting a
 
 <h2>What Is Command Injections</h2>
 
-What is Command Injection?
-
 Before diving into the investigation, it is important to explain what Command Injection means.
 
 Command Injection is a serious security vulnerability that allows an attacker to run system-level commands through a vulnerable application. Instead of only processing valid input, the application mistakenly passes attacker-supplied data to the underlying operating system for execution.
